@@ -1,2 +1,2 @@
 # java-project
-hello
+echo "hello"
