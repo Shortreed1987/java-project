@@ -1,5 +1,7 @@
-node('linux'){
+pipeline{
+    agent any
     stage('Unit Tests'){
-        sh 'ant -buildfile test.xml'       
+        sh 'ant -f test.xml -v'
+        junit 'reports/*.xml'
     }
 }
